@@ -31,13 +31,7 @@ class MailController extends Controller
 
         try {
             // Server settings
-            $mail->isSMTP();
-            $mail->Host = 'mail.addsolutions.biz';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'infomini@addsolutions.biz';
-            $mail->Password = '6jJiV&$b2+Wk'; // Be sure to secure this!
-            $mail->SMTPSecure = 'ssl';
-            $mail->Port = 465;
+
 
             // Recipients
             $mail->setFrom('infomini@addsolutions.biz', 'BS Agro');
