@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminProductController;
+use App\Http\Middleware\EnsureUserIsAuthenticated;
+
 
 Route::get('/', function () {
     return view('index');
@@ -38,15 +40,22 @@ Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'showLogi
 Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::post('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
-// Protect admin routes with auth middleware
-Route::get('/admin', [App\Http\Controllers\AdminProductController::class, 'index'])->name('admin.products');
-Route::get('/admin/products/create', [App\Http\Controllers\AdminProductController::class, 'create'])->name('admin.products.create');
-Route::post('/admin/products', [App\Http\Controllers\AdminProductController::class, 'store'])->name('admin.products.store');
-Route::get('/admin/products/{product}/edit', [App\Http\Controllers\AdminProductController::class, 'edit'])->name('admin.products.edit');
-Route::put('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'update'])->name('admin.products.update');
-Route::delete('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'destroy'])->name('admin.products.destroy');
+// Route::get('/admin', [App\Http\Controllers\AdminProductController::class, 'index'])->name('admin.products');
+// Route::get('/admin/products/create', [App\Http\Controllers\AdminProductController::class, 'create'])->name('admin.products.create');
+// Route::post('/admin/products', [App\Http\Controllers\AdminProductController::class, 'store'])->name('admin.products.store');
+// Route::get('/admin/products/{product}/edit', [App\Http\Controllers\AdminProductController::class, 'edit'])->name('admin.products.edit');
+// Route::put('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'update'])->name('admin.products.update');
+// Route::delete('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'destroy'])->name('admin.products.destroy');
 
 
+Route::middleware([EnsureUserIsAuthenticated::class])->group(function () {
+    Route::get('/admin', [App\Http\Controllers\AdminProductController::class, 'index'])->name('admin.products');
+    Route::get('/admin/products/create', [App\Http\Controllers\AdminProductController::class, 'create'])->name('admin.products.create');
+    Route::post('/admin/products', [App\Http\Controllers\AdminProductController::class, 'store'])->name('admin.products.store');
+    Route::get('/admin/products/{product}/edit', [App\Http\Controllers\AdminProductController::class, 'edit'])->name('admin.products.edit');
+    Route::put('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'update'])->name('admin.products.update');
+    Route::delete('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'destroy'])->name('admin.products.destroy');
+});
 
 // Display Products to Viewers
 Route::get('/products', function () {

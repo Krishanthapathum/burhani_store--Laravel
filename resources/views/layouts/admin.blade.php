@@ -75,19 +75,9 @@
             padding: 20px;
         }
 
-        .sidebar .logout a {
-            color: #ffffff;
-            background-color: #28a745;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            display: block; /* Ensure full width for logout button */
-            width: 100%;
-        }
 
-        .sidebar .logout a:hover {
-            background-color: #4d0410;
-        }
+
+
 
         .main-content {
             margin-left: 250px;
@@ -96,9 +86,11 @@
         }
 
         .footer {
-            background-color: #ffffff;
+            background-color: #cfd3d0;
+            /* Set to green */
             border-top: 1px solid #e7e7e7;
-            color: #333;
+            color: #ffffff;
+            /* Change text color to white for better contrast */
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
@@ -108,9 +100,31 @@
             margin-left: 250px;
         }
 
+
         .footer p {
             margin: 0;
         }
+
+        .logout-button {
+            color: #e70b0b;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #c30000;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+
 
         @media (max-width: 768px) {
             .sidebar {
@@ -157,8 +171,10 @@
                 <i class="fas fa-box"></i> Products
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" style="padding-left: 40px;" href="{{ route('admin.products') }}"><i class="fas fa-list"></i> View Products</a>
-                <a class="dropdown-item" style="padding-left: 40px;" href="{{ route('admin.products.create') }}"><i class="fas fa-plus"></i> Add Product</a>
+                <a class="dropdown-item" style="padding-left: 40px;" href="{{ route('admin.products') }}"><i
+                        class="fas fa-list"></i> View Products</a>
+                <a class="dropdown-item" style="padding-left: 40px;" href="{{ route('admin.products.create') }}"><i
+                        class="fas fa-plus"></i> Add Product</a>
             </div>
         </div>
 
@@ -166,7 +182,7 @@
         <div class="logout">
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="btn btn-link" style="color: #0f8539; text-decoration: none;">
+                <button type="submit" class="logout-button">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </button>
             </form>
@@ -180,7 +196,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p>&copy; 2024 Admin Panel. All rights reserved.</p>
+        <p>&copy; 2024 Burhani Stores. All rights reserved.</p>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -190,18 +206,18 @@
 
     <!-- JavaScript to handle hover functionality -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             // Get the dropdown menu
             const productsDropdown = document.querySelector(".dropdown");
             const dropdownMenu = productsDropdown.querySelector(".dropdown-menu");
 
             // Show dropdown on hover
-            productsDropdown.addEventListener("mouseenter", function () {
+            productsDropdown.addEventListener("mouseenter", function() {
                 dropdownMenu.style.display = "block";
             });
 
             // Hide dropdown when not hovering
-            productsDropdown.addEventListener("mouseleave", function () {
+            productsDropdown.addEventListener("mouseleave", function() {
                 dropdownMenu.style.display = "none";
             });
         });
