@@ -9,6 +9,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
+
     <style>
         /* Set background image */
         body {
@@ -79,10 +85,19 @@
         .login-container a:hover {
             text-decoration: underline;
         }
+
+
     </style>
 </head>
 
 <body>
+
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="{{ asset('images/titlesvg.svg') }}" alt=""></div>
+        </div>
+    </div>
 
     <div class="login-container">
         <h2>Admin Login</h2>
@@ -93,7 +108,7 @@
                 <label for="email">Email Address</label>
                 <input type="email" name="email" class="form-control" required autofocus>
                 @error('email')
-                <span class="text-danger">{{ $message }}</span>
+                    <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
@@ -101,7 +116,7 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" class="form-control" required>
                 @error('password')
-                <span class="text-danger">{{ $message }}</span>
+                    <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
@@ -115,6 +130,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('js/function.js') }}"></script>
+    <script src="{{ asset('assets/js/theme-panel.js') }}"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 
 @section('content')
     <h1 class="mb-4">Edit Product</h1>
-
+<hr>
     <!-- Display success message -->
     @if (session('success'))
         <div class="alert alert-success">
