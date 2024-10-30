@@ -115,7 +115,7 @@
                 <div class="col-lg-6 col-md-6">
                     <!-- Footer Copyright Start -->
                     <div class="footer-copyright-text">
-                        <p>©BS Agro. All Rights Reserved.</p>
+                        <p>&copy; <span id="year"></span> Burhani Stores. All Rights Reserved.</p>
                     </div>
                     <!-- Footer Copyright End -->
                 </div>

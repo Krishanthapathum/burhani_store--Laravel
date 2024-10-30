@@ -47,7 +47,7 @@ Route::post('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout
 // Route::put('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'update'])->name('admin.products.update');
 // Route::delete('/admin/products/{product}', [App\Http\Controllers\AdminProductController::class, 'destroy'])->name('admin.products.destroy');
 
-
+// Admin routes
 Route::middleware([EnsureUserIsAuthenticated::class])->group(function () {
     Route::get('/admin', [App\Http\Controllers\AdminProductController::class, 'index'])->name('admin.products');
     Route::get('/admin/products/create', [App\Http\Controllers\AdminProductController::class, 'create'])->name('admin.products.create');

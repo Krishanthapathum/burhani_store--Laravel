@@ -110,6 +110,11 @@
             });
         }
     </script>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
 </body>
 
 </html>

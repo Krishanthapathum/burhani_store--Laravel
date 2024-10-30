@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/titlesvg.svg') }}">
     <title>BS Agro Admin</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -202,10 +201,14 @@
         @yield('content')
     </main>
 
-    <!-- Footer -->
     <div class="footer">
-        <p>&copy; 2024 Burhani Stores. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Burhani Stores. All rights reserved.</p>
     </div>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

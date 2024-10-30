@@ -10,10 +10,12 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
+        'item_code',
         'item_name',
         'description',
         'price',
         'availability',
         'image_filename',
+        'category',
     ];
 }
