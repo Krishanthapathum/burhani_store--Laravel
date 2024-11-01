@@ -868,10 +868,10 @@
                                         <h3>Efficient Water Management</h3>
                                         <p>Innovative irrigation solutions for urban agriculture.</p>
                                     </div>
-                                    <div class="work-readmore-btn">
+                                    {{-- <div class="work-readmore-btn">
                                         <a href="#"><img src="{{ asset('images/arrow-green.svg') }}"
                                                 alt="Read more"></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -891,10 +891,10 @@
                                         <h3>Urban Irrigation Solutions</h3>
                                         <p>Tailored watering technologies for city landscapes.</p>
                                     </div>
-                                    <div class="work-readmore-btn">
+                                    {{-- <div class="work-readmore-btn">
                                         <a href="#"><img src="{{ asset('images/arrow-green.svg') }}"
                                                 alt="Read more"></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -914,10 +914,10 @@
                                         <h3>Greenhouse Climate Control</h3>
                                         <p>Optimized designs to improve plant growth.</p>
                                     </div>
-                                    <div class="work-readmore-btn">
+                                    {{-- <div class="work-readmore-btn">
                                         <a href="#"><img src="{{ asset('images/arrow-green.svg') }}"
                                                 alt="Read more"></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -937,10 +937,10 @@
                                         <h3>Advanced Greenhouse Technologies</h3>
                                         <p>Cutting-edge greenhouse setups to boost sustainability.</p>
                                     </div>
-                                    <div class="work-readmore-btn">
+                                    {{-- <div class="work-readmore-btn">
                                         <a href="#"><img src="{{ asset('images/arrow-green.svg') }}"
                                                 alt="Read more"></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -960,10 +960,10 @@
                                         <h3>Sustainable Chemical Application</h3>
                                         <p>Precise sprayers to enhance plant health.</p>
                                     </div>
-                                    <div class="work-readmore-btn">
+                                    {{-- <div class="work-readmore-btn">
                                         <a href="#"><img src="{{ asset('images/arrow-green.svg') }}"
                                                 alt="Read more"></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -983,10 +983,10 @@
                                         <h3>Advanced Agricultural Automation</h3>
                                         <p>Automation systems to streamline farming operations.</p>
                                     </div>
-                                    <div class="work-readmore-btn">
+                                    {{-- <div class="work-readmore-btn">
                                         <a href="#"><img src="{{ asset('images/arrow-green.svg') }}"
                                                 alt="Read more"></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
